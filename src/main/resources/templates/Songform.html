@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Form</title>
+
+<body>
+
+    <form action="#" th:action="@{/songform}" method="post" th:object="${song}">
+<div class="card-body">
+
+    <ol>
+        <li class="card-title"> Name: <input type="text" th:field="*{name}"/></li>
+        <li class="card-title">Artist: <input type="text" th:field="*{artist}" /></li>
+        <li class="card-title">Album: <input type="text" th:field="*{album}" /></li>
+        <li class="card-title">Year: <input type="number" th:field="*{year}"/></li>
+    </ol>
+
+
+
+         <div class="container-fluid">
+
+    Rating:
+
+             <input type="radio"  id="one" th:field="*{rating}"th:value="1" />
+             <input type="radio"  id="two" th:field="*{rating}"th:value="2" />
+             <input type="radio"  id="three" th:field="*{rating}"th:value="3" />
+             <input type="radio"  id="four" th:field="*{rating}"th:value="4" />
+             <input type="radio"  id="five" th:field="*{rating}"th:value="5" />
+             <input type="radio"  id="six" th:field="*{rating}"th:value="6" />
+             <input type="radio"  id="seven" th:field="*{rating}"th:value="7" />
+             <input type="radio"  id="eight" th:field="*{rating}"th:value="8" />
+             <input type="radio"  id="nine" th:field="*{rating}"th:value="9" />
+             <input type="radio"  id="ten" th:field="*{rating}"th:value="10" />
+
+         </div>
+    <div class=""container-fluid>
+
+    Genre:
+        <input type="radio" id="rock" th:field="*{genre}"th:value="Rock"/>
+       <label for="rock">Rock</label>
+        <input type="radio" id="pop" th:field="*{genre}"th:value="Pop"/>
+        <label for="rock">Pop</label>
+        <input type="radio" id="classic" th:field="*{genre}"th:value="Classis"/>
+        <label for="rock">Classic</label>
+        <input type="radio" id="other" th:field="*{genre}"th:value="Other"/>
+        <label for="rock">Other</label>
+    </div>
+    <div class="container-fluid">
+        In Stock:
+        <input type="radio" id="yes" th:field="*{inStock}"th:value="true"/>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" th:field="*{inStock}"th:value="false"/>
+        <label for="no">No</label>
+    </div>
+</div>
+        </form>
+
+</body>
+</html>
